@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Week 5: Machine Learning Part 1 — AI4ALL Resources</title>
+  <style>
+    :root {
+      --gold:    #F5A900;
+      --magenta: #8F0050;
+      --green:   #2A4D1F;
+      --pink:    #E8547A;
+      --light-bg: #fdf8ef;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: var(--light-bg); color: #1a1a1a; }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--gold);
+      padding: 2rem 2.5rem 1.6rem;
+      border-bottom: 5px solid var(--magenta);
+      position: relative;
+      min-height: 110px;
+    }
+    .week-badge {
+      display: inline-block;
+      background: var(--magenta);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.7rem;
+      border-radius: 20px;
+      margin-bottom: 0.55rem;
+    }
+    header h1 { font-size: 2rem; font-weight: 900; color: var(--magenta); line-height: 1.1; }
+    header p.sub { font-size: 0.92rem; color: var(--green); font-weight: 600; margin-top: 0.35rem; }
+    header .logo {
+      position: absolute; top: 50%; right: 2.5rem;
+      transform: translateY(-50%); height: 36px; width: auto;
+    }
+
+    /* ── NAV ── */
+    nav { background: var(--magenta); padding: 0.55rem 2.5rem; }
+    nav a { color: #fff; text-decoration: none; font-weight: 600; font-size: 0.88rem; }
+    nav a:hover { text-decoration: underline; }
+
+    /* ── MAIN ── */
+    main { max-width: 1150px; margin: 2rem auto; padding: 0 1.5rem 4rem; }
+
+    /* ── TOPIC SECTION ── */
+    .topic-section { margin-bottom: 2.5rem; }
+    .topic-header {
+      background: var(--green);
+      border-radius: 8px 8px 0 0;
+      padding: 0.85rem 1.5rem;
+    }
+    .topic-header h2 { color: #fff; font-size: 1.1rem; font-weight: 700; }
+
+    /* ── CONNECTED CARD GRID ── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-left: 1.5px solid #ddd;
+      border-top: 1.5px solid #ddd;
+      border-radius: 0 0 8px 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    /* ── CARD ── */
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1.25rem 1.25rem 1rem;
+      border-right: 1.5px solid #ddd;
+      border-bottom: 1.5px solid #ddd;
+      aspect-ratio: 3 / 2;
+      background: #fff;
+      transition: background 0.15s;
+    }
+    .card:hover { background: #fffbf2; }
+
+    .card-top { display: flex; flex-direction: column; gap: 0.55rem; }
+
+    a.card-title {
+      color: var(--magenta);
+      font-weight: 700;
+      font-size: 0.95rem;
+      line-height: 1.3;
+      text-decoration: none;
+    }
+    a.card-title:hover { text-decoration: underline; }
+    span.card-title { color: var(--magenta); font-weight: 700; font-size: 0.95rem; line-height: 1.3; }
+
+    .card-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.15rem 0.55rem;
+      border-radius: 20px;
+      border: 1.5px solid currentColor;
+    }
+    .tag-source { color: var(--green); border-color: var(--green); }
+    /* year tag: magenta-pink to match AI4ALL palette */
+    .tag-date { color: var(--pink); border-color: var(--pink); }
+
+    .card-desc { font-size: 0.82rem; color: #555; line-height: 1.45; }
+
+    .card-footer { padding-top: 0.6rem; }
+    .btn-resource {
+      display: inline-block;
+      background: var(--magenta);
+      color: #fff;
+      text-decoration: none;
+      padding: 0.4rem 1rem;
+      border-radius: 30px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      transition: background 0.15s;
+    }
+    .btn-resource:hover { background: #6e003d; }
+
+    /* ── FOOTER ── */
+    footer { background: var(--green); color: #fff; text-align: center; padding: 1.2rem; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="week-badge">Week 5</div>
+    <h1>Machine Learning Part 1</h1>
+    <p class="sub">AI4ALL Resource Guide &nbsp;·&nbsp; Up to 3 curated resources per topic</p>
+    <img class="logo" src="data:image/png;base64,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" alt="AI4ALL Logo"/>
+  </header>
+  <nav><a href="../index.html">← Back to All Themes</a></nav>
+  <main>
+    <section class="topic-section">
+      <div class="topic-header"><h2>Supervised Learning</h2></div>
+      <div class="cards-grid">
+          <div class="card">
+            <div class="card-top">
+              <a href="https://www.youtube.com/watch?v=Gv9_4yMHFhI" target="_blank" class="card-title">StatQuest: A Gentle Introduction to Machine Learning</a>
+              <div class="card-tags"><span class="tag tag-source">YouTube / StatQuest</span><span class="tag tag-date">2019</span></div>
+              <p class="card-desc">🎶 Josh Starmer's approachable style is beloved. Start here — every ML student should watch this.</p>
+            </div>
+            <div class="card-footer"><a class="btn-resource" href="https://www.youtube.com/watch?v=Gv9_4yMHFhI" target="_blank">Open Resource ↗</a></div>
+          </div>
+          <div class="card">
+            <div class="card-top">
+              <a href="https://developers.google.com/machine-learning/crash-course" target="_blank" class="card-title">Google ML Crash Course — Supervised Learning</a>
+              <div class="card-tags"><span class="tag tag-source">Google</span><span class="tag tag-date">2024</span></div>
+              <p class="card-desc">💡 Free course from Google engineers. Includes interactive coding exercises.</p>
+            </div>
+            <div class="card-footer"><a class="btn-resource" href="https://developers.google.com/machine-learning/crash-course" target="_blank">Open Resource ↗</a></div>
+          </div>
+          <div class="card">
+            <div class="card-top">
+              <a href="https://scikit-learn.org/stable/supervised_learning.html" target="_blank" class="card-title">Sklearn Supervised Learning User Guide</a>
+              <div class="card-tags"><span class="tag tag-source">scikit-learn</span><span class="tag tag-date">2024</span></div>
+              <p class="card-desc">📘 Reference for every algorithm (linear regression → SVMs → random forests) with code examples.</p>
+            </div>
+            <div class="card-footer"><a class="btn-resource" href="https://scikit-learn.org/stable/supervised_learning.html" target="_blank">Open Resource ↗</a></div>
+          </div>
+      </div>
+    </section>
+    <section class="topic-section">
+      <div class="topic-header"><h2>Unsupervised Learning</h2></div>
+      <div class="cards-grid">
+          <div class="card">
+            <div class="card-top">
+              <a href="https://www.youtube.com/watch?v=4b5d3muPQmA" target="_blank" class="card-title">StatQuest: K-means Clustering</a>
+              <div class="card-tags"><span class="tag tag-source">YouTube / StatQuest</span><span class="tag tag-date">2020</span></div>
+              <p class="card-desc">🔵 Clear visual walkthrough of the most famous clustering algorithm. Step-by-step centroids.</p>
+            </div>
+            <div class="card-footer"><a class="btn-resource" href="https://www.youtube.com/watch?v=4b5d3muPQmA" target="_blank">Open Resource ↗</a></div>
+          </div>
+          <div class="card">
+            <div class="card-top">
+              <a href="https://www.naftaliharris.com/blog/visualizing-k-means-clustering/" target="_blank" class="card-title">Visualizing K-Means Clustering (Interactive)</a>
+              <div class="card-tags"><span class="tag tag-source">Naftali Harris</span><span class="tag tag-date">2014</span></div>
+              <p class="card-desc">✨ Click to place data points, watch k-means run step by step. Amazing intuition builder.</p>
+            </div>
+            <div class="card-footer"><a class="btn-resource" href="https://www.naftaliharris.com/blog/visualizing-k-means-clustering/" target="_blank">Open Resource ↗</a></div>
+          </div>
+          <div class="card">
+            <div class="card-top">
+              <a href="https://scikit-learn.org/stable/unsupervised_learning.html" target="_blank" class="card-title">Sklearn Unsupervised Learning Guide</a>
+              <div class="card-tags"><span class="tag tag-source">scikit-learn</span><span class="tag tag-date">2024</span></div>
+              <p class="card-desc">📘 Covers K-means, DBSCAN, PCA, Gaussian mixture models with API examples.</p>
+            </div>
+            <div class="card-footer"><a class="btn-resource" href="https://scikit-learn.org/stable/unsupervised_learning.html" target="_blank">Open Resource ↗</a></div>
+          </div>
+      </div>
+    </section>
+    <section class="topic-section">
+      <div class="topic-header"><h2>Training and Testing Data</h2></div>
+      <div class="cards-grid">
+          <div class="card">
+            <div class="card-top">
+              <a href="https://www.youtube.com/watch?v=fSytzGwwBVw" target="_blank" class="card-title">StatQuest: Machine Learning Fundamentals — Cross Validation</a>
+              <div class="card-tags"><span class="tag tag-source">YouTube / StatQuest</span><span class="tag tag-date">2017</span></div>
+              <p class="card-desc">📐 The definitive visual explanation of why we split data and how cross-validation works.</p>
+            </div>
+            <div class="card-footer"><a class="btn-resource" href="https://www.youtube.com/watch?v=fSytzGwwBVw" target="_blank">Open Resource ↗</a></div>
+          </div>
+          <div class="card">
+            <div class="card-top">
+              <a href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html" target="_blank" class="card-title">Sklearn train_test_split Documentation</a>
+              <div class="card-tags"><span class="tag tag-source">scikit-learn</span><span class="tag tag-date">2024</span></div>
+              <p class="card-desc">🔀 Official API reference with random_state, stratify, and shuffle parameters explained.</p>
+            </div>
+            <div class="card-footer"><a class="btn-resource" href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html" target="_blank">Open Resource ↗</a></div>
+          </div>
+          <div class="card">
+            <div class="card-top">
+              <a href="https://realpython.com/train-test-split-python-data/" target="_blank" class="card-title">Train/Test Split in Python — Real Python</a>
+              <div class="card-tags"><span class="tag tag-source">Real Python</span><span class="tag tag-date">2024</span></div>
+              <p class="card-desc">📊 Free, thorough walkthrough with diagrams and copy-paste sklearn code. No paywall.</p>
+            </div>
+            <div class="card-footer"><a class="btn-resource" href="https://realpython.com/train-test-split-python-data/" target="_blank">Open Resource ↗</a></div>
+          </div>
+      </div>
+    </section>
+  </main>
+  <footer>Resources compiled 2026 &nbsp;|&nbsp; AI4ALL Program</footer>
+</body>
+</html>

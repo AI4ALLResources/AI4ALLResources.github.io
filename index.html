@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI4ALL Resource Hub — All Themes</title>
+  <style>
+    :root {
+      --gold:    #F5A900;
+      --magenta: #8F0050;
+      --green:   #2A4D1F;
+      --light-bg: #fdf8ef;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--light-bg);
+      color: #1a1a1a;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--gold);
+      padding: 2rem 2.5rem 1.6rem;
+      border-bottom: 5px solid var(--magenta);
+      position: relative;
+      min-height: 110px;
+    }
+    .hub-label {
+      display: inline-block;
+      background: var(--magenta);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.7rem;
+      border-radius: 20px;
+      margin-bottom: 0.55rem;
+    }
+    header h1 {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--magenta);
+      line-height: 1.1;
+    }
+    header p.sub {
+      font-size: 0.92rem;
+      color: var(--green);
+      font-weight: 600;
+      margin-top: 0.35rem;
+    }
+    header .logo {
+      position: absolute;
+      top: 50%;
+      right: 2.5rem;
+      transform: translateY(-50%);
+      height: 36px;
+      width: auto;
+    }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 1150px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem 4rem;
+    }
+    .section-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--green);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--gold);
+    }
+
+    /* ── THEME CARD GRID ── */
+    .themes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.2rem;
+    }
+
+    /* ── THEME CARD ── */
+    a.theme-card {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: box-shadow 0.18s, transform 0.18s;
+      overflow: hidden;
+      border-top: 4px solid var(--gold);
+    }
+    a.theme-card:hover {
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      transform: translateY(-2px);
+    }
+    .card-inner {
+      padding: 1.4rem 1.4rem 1.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      height: 100%;
+    }
+    .card-top { flex: 1; display: flex; flex-direction: column; gap: 0.45rem; }
+    .week-badge {
+      display: inline-block;
+      background: var(--magenta);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.65rem;
+      border-radius: 20px;
+      width: fit-content;
+    }
+    h2.card-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--magenta);
+      line-height: 1.25;
+    }
+    p.card-desc {
+      font-size: 0.85rem;
+      color: #555;
+      line-height: 1.5;
+    }
+    .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .meta-pill {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--green);
+      border: 1.5px solid var(--green);
+      padding: 0.15rem 0.55rem;
+      border-radius: 20px;
+    }
+    .card-arrow {
+      margin-left: auto;
+      font-size: 1.1rem;
+      color: var(--magenta);
+      font-weight: 700;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--green);
+      color: #fff;
+      text-align: center;
+      padding: 1.2rem;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hub-label">AI4ALL Resource Hub</div>
+    <h1>All Themes</h1>
+    <p class="sub">Select a theme to explore curated resources</p>
+    <img class="logo" src="data:image/png;base64,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" alt="AI4ALL Logo"/>
+  </header>
+  <main>
+    <p class="section-label">Browse by Theme</p>
+    <div class="themes-grid">
+      
+      <a class="theme-card" href="Week_01_Introduction_and_Project_Management/Introduction_and_Project_Management.html">
+        <div class="card-inner">
+          <div class="card-top">
+            <span class="week-badge">Week 1</span>
+            <h2 class="card-title">Introduction & Project Management</h2>
+            <p class="card-desc">Kickstart your AI journey — project scoping, team tools, and version control basics.</p>
+          </div>
+          <div class="card-meta">
+            <span class="meta-pill">3 topics</span>
+            <span class="meta-pill">7 resources</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+      <a class="theme-card" href="Week_02_What_is_AI_and_Data/What_is_AI_and_Data.html">
+        <div class="card-inner">
+          <div class="card-top">
+            <span class="week-badge">Week 2</span>
+            <h2 class="card-title">What is AI and Data?</h2>
+            <p class="card-desc">Explore the landscape of AI, machine learning, and the data that powers it all.</p>
+          </div>
+          <div class="card-meta">
+            <span class="meta-pill">3 topics</span>
+            <span class="meta-pill">6 resources</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+      <a class="theme-card" href="Week_03_Data_Exploration/Data_Exploration.html">
+        <div class="card-inner">
+          <div class="card-top">
+            <span class="week-badge">Week 3</span>
+            <h2 class="card-title">Data Exploration</h2>
+            <p class="card-desc">Dive into data: sourcing, cleaning, transforming, and visualizing for insights.</p>
+          </div>
+          <div class="card-meta">
+            <span class="meta-pill">3 topics</span>
+            <span class="meta-pill">9 resources</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+      <a class="theme-card" href="Week_04_Collaboration_Tools/Collaboration_Tools.html">
+        <div class="card-inner">
+          <div class="card-top">
+            <span class="week-badge">Week 4</span>
+            <h2 class="card-title">Collaboration Tools</h2>
+            <p class="card-desc">Master the platforms your team will use — Ed Discussion, GitHub, and more.</p>
+          </div>
+          <div class="card-meta">
+            <span class="meta-pill">3 topics</span>
+            <span class="meta-pill">9 resources</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+      <a class="theme-card" href="Week_05_Machine_Learning_Part_1/Machine_Learning_Part_1.html">
+        <div class="card-inner">
+          <div class="card-top">
+            <span class="week-badge">Week 5</span>
+            <h2 class="card-title">Machine Learning Part 1</h2>
+            <p class="card-desc">Foundations of supervised and unsupervised learning with hands-on models.</p>
+          </div>
+          <div class="card-meta">
+            <span class="meta-pill">3 topics</span>
+            <span class="meta-pill">9 resources</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+      <a class="theme-card" href="Week_06_Machine_Learning_Part_2/Machine_Learning_Part_2.html">
+        <div class="card-inner">
+          <div class="card-top">
+            <span class="week-badge">Week 6</span>
+            <h2 class="card-title">Machine Learning Part 2</h2>
+            <p class="card-desc">Go deeper — computer vision, NLP, and transfer learning techniques.</p>
+          </div>
+          <div class="card-meta">
+            <span class="meta-pill">3 topics</span>
+            <span class="meta-pill">7 resources</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+      <a class="theme-card" href="Week_08_Training_an_ML_Model/Training_an_ML_Model.html">
+        <div class="card-inner">
+          <div class="card-top">
+            <span class="week-badge">Week 8</span>
+            <h2 class="card-title">Training an ML Model</h2>
+            <p class="card-desc">Train, test, evaluate, and tune: the full ML workflow from data to metrics.</p>
+          </div>
+          <div class="card-meta">
+            <span class="meta-pill">3 topics</span>
+            <span class="meta-pill">8 resources</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+      <a class="theme-card" href="Week_09_Modern_ML_Applications/Modern_ML_Applications.html">
+        <div class="card-inner">
+          <div class="card-top">
+            <span class="week-badge">Week 9</span>
+            <h2 class="card-title">Modern ML Applications</h2>
+            <p class="card-desc">LLMs, Hugging Face, APIs, and prompt engineering for real-world AI.</p>
+          </div>
+          <div class="card-meta">
+            <span class="meta-pill">3 topics</span>
+            <span class="meta-pill">6 resources</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+      <a class="theme-card" href="Week_11_Model_Deployment/Model_Deployment.html">
+        <div class="card-inner">
+          <div class="card-top">
+            <span class="week-badge">Week 11</span>
+            <h2 class="card-title">Model Deployment</h2>
+            <p class="card-desc">Take models to production — MLOps, monitoring, and deployment pipelines.</p>
+          </div>
+          <div class="card-meta">
+            <span class="meta-pill">3 topics</span>
+            <span class="meta-pill">7 resources</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </main>
+  <footer>
+    Resources compiled 2026 &nbsp;|&nbsp; AI4ALL Program
+  </footer>
+</body>
+</html>
