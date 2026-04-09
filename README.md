@@ -16,57 +16,30 @@ All resources are also available in a single downloadable file:
 
 ---
 
-## Curriculum Structure
+## Repository Structure
 
-```mermaid
-flowchart TD
-    HUB["🌐 AI4ALL Resource Hub"]
-
-    HUB --> W1["Week 1\nIntroduction &\nProject Management"]
-    HUB --> W2["Week 2\nWhat is AI\nand Data?"]
-    HUB --> W3["Week 3\nData Exploration"]
-    HUB --> W4["Week 4\nMachine Learning\nPart 1"]
-    HUB --> W5["Week 5\nMachine Learning\nPart 2"]
-    HUB --> W6["Week 6\nCollaboration Tools"]
-    HUB --> W8["Week 8\nTraining an\nML Model"]
-    HUB --> W9["Week 9\nModern ML\nApplications"]
-    HUB --> W11["Week 11\nModel Deployment"]
-
-    W1 --> W1A["Project Management"]
-    W1 --> W1B["Scope & SMART Goals"]
-    W1 --> W1C["EdSTEM"]
-
-    W2 --> W2A["What is ML/AI?"]
-    W2 --> W2B["Data Sourcing"]
-    W2 --> W2C["Data Types"]
-
-    W3 --> W3A["Data Cleaning"]
-    W3 --> W3B["Data Transformations"]
-    W3 --> W3C["Data Visualizations"]
-
-    W4 --> W4A["Supervised Learning"]
-    W4 --> W4B["Unsupervised Learning"]
-    W4 --> W4C["Training & Testing Data"]
-
-    W5 --> W5A["Computer Vision"]
-    W5 --> W5B["Natural Language Processing"]
-    W5 --> W5C["Transfer Learning"]
-
-    W6 --> W6A["Version Control"]
-    W6 --> W6B["GitHub"]
-    W6 --> W6C["Virtual Environments / Docker"]
-
-    W8 --> W8A["Confusion Matrix"]
-    W8 --> W8B["Accuracy / AUC / ROC"]
-    W8 --> W8C["k-Fold Cross Validation"]
-
-    W9 --> W9A["LLM Prompt Engineering"]
-    W9 --> W9B["Hugging Face / API Calls to LLM"]
-    W9 --> W9C["PySpark / Cloud"]
-
-    W11 --> W11A["Deployment"]
-    W11 --> W11B["MLOps"]
-    W11 --> W11C["Monitoring"]
+```
+AI4ALLResources.github.io/
+├── index.html                                      # Main hub landing page
+├── AI4ALL_Resources.xlsx                           # All resources in one spreadsheet
+├── Week_01_Introduction_and_Project_Management/
+│   └── Introduction_and_Project_Management.html
+├── Week_02_What_is_AI_and_Data/
+│   └── What_is_AI_and_Data.html
+├── Week_03_Data_Exploration/
+│   └── Data_Exploration.html
+├── Week_04_Machine_Learning_Part_1/
+│   └── Machine_Learning_Part_1.html
+├── Week_05_Machine_Learning_Part_2/
+│   └── Machine_Learning_Part_2.html
+├── Week_06_Collaboration_Tools/
+│   └── Collaboration_Tools.html
+├── Week_08_Training_an_ML_Model/
+│   └── Training_an_ML_Model.html
+├── Week_09_Modern_ML_Applications/
+│   └── Modern_ML_Applications.html
+└── Week_11_Model_Deployment/
+    └── Model_Deployment.html
 ```
 
 ---
@@ -153,34 +126,6 @@ Taking a trained model to production: deployment pipelines, MLOps practices, and
 | Deployment | 3 |
 | MLOps | 2 |
 | Monitoring | 2 |
-
----
-
-## Repository Structure
-
-```
-AI4ALLResources.github.io/
-├── index.html                                      # Main hub landing page
-├── AI4ALL_Resources.xlsx                           # All resources in one spreadsheet
-├── Week_01_Introduction_and_Project_Management/
-│   └── Introduction_and_Project_Management.html
-├── Week_02_What_is_AI_and_Data/
-│   └── What_is_AI_and_Data.html
-├── Week_03_Data_Exploration/
-│   └── Data_Exploration.html
-├── Week_04_Machine_Learning_Part_1/
-│   └── Machine_Learning_Part_1.html
-├── Week_05_Machine_Learning_Part_2/
-│   └── Machine_Learning_Part_2.html
-├── Week_06_Collaboration_Tools/
-│   └── Collaboration_Tools.html
-├── Week_08_Training_an_ML_Model/
-│   └── Training_an_ML_Model.html
-├── Week_09_Modern_ML_Applications/
-│   └── Modern_ML_Applications.html
-└── Week_11_Model_Deployment/
-    └── Model_Deployment.html
-```
 
 ---
 
